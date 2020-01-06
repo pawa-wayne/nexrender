@@ -20,7 +20,7 @@ const seconds = (string) => string.split(':')
  * This task creates rendering process
  */
 module.exports = (job, settings) => {
-    settings.logger.log(`[${job.uid}] rendering job...`);
+    settings.logger.log(`[${job.uid}] > rendering job...`);
 
     // create container for our parameters
     let params = [];
