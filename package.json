@@ -32,5 +32,9 @@
     "lerna": "^3.19.0",
     "mocha": "^6.1.4",
     "pkg": "^4.4.1"
+  },
+  "dependencies": {
+    "@nexrender/core": "file:packages/nexrender-core",
+    "start": "^5.1.0"
   }
 }

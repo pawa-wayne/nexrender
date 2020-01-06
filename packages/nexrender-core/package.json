@@ -1,6 +1,6 @@
 {
   "name": "@nexrender/core",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "main": "src/index.js",
   "author": "Inlife",
   "scripts": {
@@ -14,14 +14,7 @@
     "node-fetch": "^2.3.0",
     "requireg": "^0.2.1"
   },
-  "peerDependencies": {
-    "@nexrender/action-copy": "^1.0.0",
-    "@nexrender/action-encode": "^1.1.4",
-    "@nexrender/action-upload": "^1.0.0",
-    "@nexrender/provider-ftp": "^1.0.0",
-    "@nexrender/provider-gs": "^1.0.0",
-    "@nexrender/provider-s3": "^1.0.0"
-  },
+
   "publishConfig": {
     "access": "public"
   },
