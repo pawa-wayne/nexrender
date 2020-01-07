@@ -1,7 +1,7 @@
 const { createClient } = require('@nexrender/api')
 const { init, render } = require('@nexrender/core')
 
-const NEXRENDER_API_POLLING = process.env.NEXRENDER_API_POLLING || 30 * 1000;
+const NEXRENDER_API_POLLING = process.env.NEXRENDER_API_POLLING || 5 * 1000;
 
 /* TODO: possibly add support for graceful shutdown */
 let active = true;
@@ -59,6 +59,14 @@ const start = async (host, secret, settings) => {
         }
 
         try {
+            
+            console.log("> worker onProgress setting");
+            job.onRenderProgress = async function (job, value) {
+                console.log('testing onRenderProgress:', value);
+                job.renderProgress = value;
+                await client.updateJob(job.uid, job);
+            }
+            
             job = await render(job, settings); {
                 job.state = 'finished';
             }

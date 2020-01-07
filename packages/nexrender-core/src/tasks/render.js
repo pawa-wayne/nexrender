@@ -54,7 +54,7 @@ module.exports = (job, settings) => {
 
     const parse = (data) => {
         const string = ('' + data).replace(/;/g, ':'); /* sanitize string */
-
+        
         // Only execute startRegex if project start hasnt been found
         const matchStart = isNaN(parseInt(projectStart)) ? startRegex.exec(string) : false;
         // Only execute durationRegex if project duration hasnt been found
@@ -73,7 +73,6 @@ module.exports = (job, settings) => {
                 settings.logger.log(`[${job.uid}] rendering progress ${currentProgress}%...`);
                 previousProgress = currentProgress;
                 job.renderProgress = currentProgress;
-
                 if (job.hasOwnProperty('onRenderProgress') && typeof job['onRenderProgress'] == 'function') {
                     job.onRenderProgress(job, job.renderProgress);
                 }

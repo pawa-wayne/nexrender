@@ -105,11 +105,11 @@ if (args['--help']) {
     --image-cache-percent                   (from Adobe site): specifies the maximum percentage of memory used
                                             to cache already rendered images and footage.
 
-    --reuse                                 (from Adobe site): Reuse the currently running instance of After Effects (if found) to 
-                                            perform the render. When an already running instance is used, aerender saves preferences 
-                                            to disk when rendering has completed, but does not quit After Effects. If this argument 
-                                            is not used, aerender starts a new instance of After Effects, even if one is already 
-                                            running. It quits that instance when rendering has completed, and does not save 
+    --reuse                                 (from Adobe site): Reuse the currently running instance of After Effects (if found) to
+                                            perform the render. When an already running instance is used, aerender saves preferences
+                                            to disk when rendering has completed, but does not quit After Effects. If this argument
+                                            is not used, aerender starts a new instance of After Effects, even if one is already
+                                            running. It quits that instance when rendering has completed, and does not save
                                             preferences.
 
 
@@ -137,7 +137,7 @@ if (args['--secret']) {
     serverSecret = args['--secret'] || serverSecret;
 }
 
-console.log(chalk`> starting {bold.cyan nexrender-worker} endpoint {bold ${serverHost}}; using secret: {bold ${serverSecret ? 'yes' : 'no'}}`)
+console.log(chalk`>>> starting {bold.cyan nexrender-worker} endpoint {bold ${serverHost}}; using secret: {bold ${serverSecret ? 'yes' : 'no'}}`)
 
 let settings = {};
 const opt = (key, arg) => {if (args[arg]) {
