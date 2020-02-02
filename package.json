@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@nexrender/core": "file:packages/nexrender-core",
+    "@nexrender/worker": "file:packages/nexrender-worker",
     "start": "^5.1.0"
   }
 }
